@@ -49,13 +49,21 @@ ScrollReveal().reveal('.home-content h1, .about-img',{ origin:'left'});
 ScrollReveal().reveal('.home-content p, .about-content',{ origin:'right'});
 
 /*=========typed js =========*/
-const typed = new Typed('.multiple-text',{
-    strings: ['Software Developer','Frontend Developer','Web Designer'],
-    typeSpeed:100,
-    backSpeed:100,
-    backDelay:1000,
-    loop:true
+
+const typed = new Typed('.multiple-text', {
+    strings: [
+        'AI/ML Engineer',
+        'Machine Learning Engineer',
+        'Python Developer',
+        'AI Application Developer',
+        'RAG & LLM Developer'
+    ],
+    typeSpeed: 70,
+    backSpeed: 50,
+    backDelay: 1500,
+    loop: true
 });
+
 
 const type = new Typed('.logo',{
     strings: ['Muskan Kumar'],
