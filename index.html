@@ -1,198 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio | @Muskan Kumar |</title>
-
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="portfolio.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muskan Kumar | AI/ML Engineer</title>
+<meta name="description" content="AI/ML Engineer building RAG, multi-agent and MLOps systems with Python, LangGraph and FastAPI.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header Design -->
-    <header class="header">
-        <!-- <a href="#" class="logo" >Muskan Kumar</a> -->
+<div class="web-pattern"></div>
+<div class="cursor-glow" id="cursor-glow"></div>
 
-        <h3><span class="logo" style="color: #0ef;"></span></h3>
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="#home" class="nav-logo">
+      <span class="logo-circle">MK</span>
+      <span class="logo-full">Muskan Kumar</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="Muskan_Kumar_CV.pdf" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme-toggle" aria-label="Switch theme">◐</button>
+      <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
 
-        <i class="bx bx-menu" id="menu-icon"></i>
+<main>
+<!-- HOME -->
+<section id="home" class="hero">
+  <div class="hero-container">
+    <div class="hero-left">
+      <p class="hello">Hi, I’m</p>
+      <h1 class="hero-title">Muskan Kumar</h1>
+      <div class="dynamic-title"><span>I build</span> <span class="dynamic-text" id="dynamic-text"></span><span class="cursor"></span></div>
+      <p class="hero-description">Final-year B.Tech CSE (AI &amp; ML) student. I build <strong>RAG pipelines</strong>, <strong>multi-agent systems</strong> and <strong>ML services</strong> with Python, LangGraph and FastAPI, and ship them with Docker and MLflow.</p>
+      <div class="hero-buttons">
+        <a href="Muskan_Kumar_CV.pdf" class="btn btn-primary" download>Download Resume</a>
+        <a href="#projects" class="btn btn-ghost">View Projects</a>
+      </div>
+      <div class="social-links">
+        <a class="social-link" href="https://www.linkedin.com/in/muskan-kumar-9b3870316" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a class="social-link" href="https://github.com/Muskan-Kumar" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+        <a class="social-link" href="#" target="_blank" rel="noopener" aria-label="LeetCode">LC</a>
+        <a class="social-link" href="mailto:muskanku9525@gmail.com" aria-label="Email">@</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="image-container">
+        <span class="initials">MK</span>
+        <img src="photo.png" alt="Muskan Kumar" class="profile-image" onerror="this.remove()">
+      </div>
+    </div>
+  </div>
+</section>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header> 
+<!-- ABOUT -->
+<section id="about" class="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="about-container">
+    <div class="about-text">
+      <p>I’m an aspiring <strong>AI/ML Engineer</strong> who likes turning LLM ideas into systems you can check and trust: retrieval that cites its sources, agents that follow a defined workflow, and ML models that are tracked, served and monitored for drift.</p>
+      <p>My work covers <strong>agentic RAG</strong>, <strong>multi-agent planning</strong> and an <strong>end-to-end MLOps pipeline</strong>. I build backends with FastAPI, store knowledge in Pinecone and PostgreSQL, and package everything with Docker.</p>
+      <p>I’m looking for an <strong>AI/ML engineering role or internship</strong> in Delhi NCR (open to remote).</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>8.86</b><span>CGPA / 10</span></div>
+      <div class="stat"><b>4</b><span>End-to-end projects</span></div>
+      <div class="stat"><b>5</b><span>Certifications</span></div>
+    </div>
+    <div class="edu">
+      <h3>Education</h3>
+      <p><strong>B.Tech, CSE (AI &amp; ML)</strong> · 2023–2027</p>
+      <p>Shobhit Institute of Engineering &amp; Technology, Meerut</p>
+      <p class="muted">Data Structures &amp; Algorithms, Artificial Intelligence, Machine Learning, DBMS, Operating Systems, Software Engineering</p>
+    </div>
+  </div>
+</section>
 
-    <!-- home section design -->
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hi, Myself</h3>
-            <h1>Muskan Kumar</h1>
-            <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p>I fell in love with programming and <br>I have at least learnt something , I think...<br><br>
-                I am fluent in classics like <span>Python and Javascript</span><br><br>My field of interest's are building new <span>Web and Software</span>
-                and also in <br>areas related to <span>CyberSecurity</span><br><br>
-                Whenever possible , I also apply my passion for developing<br> product With<span>  Node . Js</span> and<span> Modern Javascript
-                Library</span><br> and<span> FrameWork </span>like<span>  React . Js</span> and<span> Next . js</span>
-                
-            </p>
-            <div class="social-media">
-                <a href="https://www.facebook.com/pofile.php?id=61550249908827&mibexid=ZbWKwL" target="_blank"><i class='bx bxl-facebook'></i></a>
-                <a href="https://www.instagram.com/muskankumar9718?igsh=dGcwYmpxcW1mZ2p0" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="https://www.linkedin.com/in/muskan-kumar-9b3870316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class='bx bxl-linkedin'></i></a>     
-            </div>
-            <a href="#" class="btn">Download CV</a>
+<!-- SKILLS -->
+<section id="skills" class="skills">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-container">
+    <div class="skill-card"><h3>Generative AI &amp; LLMs</h3><div class="chips"><span>LangChain</span><span>LangGraph</span><span>RAG</span><span>LLM Integration</span><span>Sentence Transformers</span></div></div>
+    <div class="skill-card"><h3>Machine Learning</h3><div class="chips"><span>NumPy</span><span>Pandas</span><span>Scikit-learn</span><span>TensorFlow</span><span>Keras</span></div></div>
+    <div class="skill-card"><h3>Backend &amp; APIs</h3><div class="chips"><span>FastAPI</span><span>Flask</span><span>REST APIs</span><span>Node.js</span><span>Express.js</span><span>React.js</span></div></div>
+    <div class="skill-card"><h3>Databases &amp; Vector Search</h3><div class="chips"><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Pinecone</span></div></div>
+    <div class="skill-card"><h3>MLOps &amp; Tools</h3><div class="chips"><span>MLflow</span><span>Docker</span><span>Git</span><span>GitHub</span><span>Postman</span><span>Jupyter</span></div></div>
+    <div class="skill-card"><h3>Languages &amp; Deployment</h3><div class="chips"><span>Python</span><span>Java</span><span>AWS S3</span><span>Render</span><span>Vercel</span><span>Netlify</span></div></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid">
+
+    <article class="project-card">
+      <div class="project-top"><h3>AgentForge AI</h3><span class="date">Sept 2026</span></div>
+      <p class="project-sub">Multi-agent AI workspace</p>
+      <ul>
+        <li>LangGraph agents for coding, research, conversation and document processing.</li>
+        <li>RAG with embeddings and vector search for PDF question answering.</li>
+        <li>Secured FastAPI: authentication, validation, rate limiting, guardrails.</li>
+      </ul>
+      <div class="chips"><span>Python</span><span>FastAPI</span><span>LangGraph</span><span>Pinecone</span><span>PostgreSQL</span></div>
+      <div class="project-buttons"><a href="#" target="_blank" rel="noopener" class="project-btn code-btn">View Code</a><a href="#" target="_blank" rel="noopener" class="project-btn live-btn">Live Demo</a></div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-top"><h3>Enterprise HR Policy Copilot</h3><span class="date">Sept 2026</span></div>
+      <p class="project-sub">Agentic RAG system</p>
+      <ul>
+        <li>Answers HR policy questions grounded in the uploaded documents.</li>
+        <li>Evidence grading, conditional web search and source citations.</li>
+        <li>Document ingestion, workflow tracing, audit logging; Dockerized.</li>
+      </ul>
+      <div class="chips"><span>Python</span><span>FastAPI</span><span>LangGraph</span><span>Pinecone</span><span>Docker</span></div>
+      <div class="project-buttons"><a href="#" target="_blank" rel="noopener" class="project-btn code-btn">View Code</a><a href="#" target="_blank" rel="noopener" class="project-btn live-btn">Live Demo</a></div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-top"><h3>NIDS</h3><span class="date">Oct 2026</span></div>
+      <p class="project-sub">Network intrusion detection MLOps pipeline</p>
+      <ul>
+        <li>End-to-end pipeline: ingestion, preprocessing and model training.</li>
+        <li>MLflow experiment tracking to compare model performance.</li>
+        <li>FastAPI inference service with data-drift detection.</li>
+      </ul>
+      <div class="chips"><span>Python</span><span>Scikit-learn</span><span>MLflow</span><span>FastAPI</span><span>Docker</span></div>
+      <div class="project-buttons"><a href="#" target="_blank" rel="noopener" class="project-btn code-btn">View Code</a></div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-top"><h3>TravelMate AI</h3><span class="date">Aug – Sept 2026</span></div>
+      <p class="project-sub">Multi-agent travel planning assistant</p>
+      <ul>
+        <li>Turns natural-language trip requests into planning workflows.</li>
+        <li>Tools for itineraries, flights, weather and budget estimates.</li>
+        <li>FastAPI backend that orchestrates the agents.</li>
+      </ul>
+      <div class="chips"><span>Python</span><span>LangGraph</span><span>FastAPI</span><span>Groq</span><span>Tavily</span></div>
+      <div class="project-buttons"><a href="#" target="_blank" rel="noopener" class="project-btn code-btn">View Code</a><a href="#" target="_blank" rel="noopener" class="project-btn live-btn">Live Demo</a></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates" class="certificates">
+  <h2 class="section-title">Certificates</h2>
+  <div class="certificates-grid">
+    <div class="certificate-card"><b>AI Agents Course</b><span>Hugging Face</span></div>
+    <div class="certificate-card"><b>Intro to Machine Learning</b><span>Kaggle</span></div>
+    <div class="certificate-card"><b>Introduction to Generative AI</b><span>Google Cloud</span></div>
+    <div class="certificate-card"><b>Introduction to Large Language Models</b><span>Google Cloud</span></div>
+    <div class="certificate-card"><b>Generative AI Fundamentals</b><span>Google Cloud</span></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="section-header">
+    <h2 class="section-title">Contact</h2>
+    <p>Hiring for an AI/ML role or internship, or have a project idea? Let’s talk.</p>
+  </div>
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="contact-card"><h3>Email</h3><p>muskanku9525@gmail.com</p><a class="contact-link" href="mailto:muskanku9525@gmail.com">Send email</a></div>
+      <div class="contact-card"><h3>Phone</h3><p>+91 9525936400</p><a class="contact-link" href="tel:+919525936400">Call now</a></div>
+      <div class="contact-card"><h3>LinkedIn</h3><p>Muskan Kumar</p><a class="contact-link" href="https://www.linkedin.com/in/muskan-kumar-9b3870316" target="_blank" rel="noopener">Connect</a></div>
+    </div>
+    <div class="contact-form-container">
+      <div class="form-header"><h3>Send a message</h3><p>This opens your email app with the message filled in.</p></div>
+      <form id="contact-form">
+        <div class="form-row">
+          <div class="form-group"><input type="text" id="name" placeholder=" " required><label for="name">Full name</label><span class="form-line"></span></div>
+          <div class="form-group"><input type="email" id="email" placeholder=" " required><label for="email">Your email</label><span class="form-line"></span></div>
         </div>
+        <div class="form-group"><textarea id="message" rows="5" placeholder=" " required></textarea><label for="message">Your message</label><span class="form-line"></span></div>
+        <button type="submit" class="btn btn-primary submit-btn">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
 
-        <div class="home-img" >
-            <img src="pic2.png" alt="">
-        </div>
-    </section>
+<footer class="footer">
+  <div class="footer-content">
+    <div class="nav-logo"><span class="logo-circle">MK</span><span class="logo-full">Muskan Kumar</span></div>
+    <div class="footer-links"><a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+  </div>
+  <div class="footer-bottom">© 2026 Muskan Kumar. All rights reserved.</div>
+</footer>
 
-    <!-- about section design -->
-     <section class="about" id="about">
-        <div class="about-img">
-            <img src="Pic.png" alt="">
-        </div>
-
-        <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <h3>Know Who <span>I'M</span></h3>
-            <p>Hi Everyone, I am <span>Muskan Kumar</span><br>
-            from <span>Gopalganj, Bihar.</span><br>
-            I am currently pursuing B.Tech CSE from <span>Shobhit University Meerut</span>
-            </p>
-            <a href="C:\Users\MUSKAN BABU\Desktop\HTML\resume.html" class="btn">Read More</a>
-        </div>
-     </section>
-
-     <!-- service section design -->
-    <section class="services" id="services">
-        <h2 class="heading">Our<span>Services</span></h2>
-
-        <div class="services-container">
-            <div class="services-box">
-                <i class='bx bx-code-alt'></i>
-                <h3>Frontend Developer</h3>
-                <p>I'm a Frontend Developer dedicated to <br>
-                crafting responsive , user - friendly interfaces using<br>
-                modern technologies like <span>REACT . JS</span></p><br>
-                <a href="#" class="btn">Read More</a>
-            </div>
-        </div>
-
-        <div class="services-container">
-            <div class="services-box">
-                <i class='bx bx-code-alt'></i>
-                <h3>Web Development</h3>
-                <p>I creat visually compelling and highly <br>
-                functional websites using the latest<br>
-                Web technologies Including <span>HTML , CSS </span>and <span>JAVASCRIPT</span> FrameWork</p><br>
-                <a href="#" class="btn">Read More</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- portfolio section design -->
-     <section class="portfolio" id="portfolio">
-        <h2 class="heading">Latest <span>Project</span></h2>
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="one.jpg">
-                <div class="portfolio-layer">
-                    <h4>ATM MACHINE (using python)</h4>
-                    
-                    <a href="https://github.com/Muskan-Kumar/Online-Banking-System" target="_blank"><i class="bx bx-link-external"></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="two.jpg">
-                <div class="portfolio-layer">
-                    <h4>NUMBER GUESSING GAME (using python)</h4>
-                    
-                    <a href="#"><i class="bx bx-link-external"></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="three.jpg">
-                <div class="portfolio-layer">
-                    <h4>REGISTRATION LOGIN PAGE (using html css)</h4>
-                    
-                    <a href="#"><i class="bx bx-link-external"></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="three.jpg">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    
-                    <a href="#"><i class="bx bx-link-external"></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="five.jpg">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    
-                    <a href="#"><i class="bx bx-link-external"></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="one.jpg">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    
-                    <a href="#"><i class="bx bx-link-external"></i></a>
-                </div>
-            </div>
-        
-        </div>
-     </section>
-
-    <!-- contact section design -->
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
-
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
-            </div>
-            <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
-    </section>
-
-    <!-- footer design -->
-     <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2024 by Muskan | All Right Reserved.</p>
-        </div>
-        <div class="footer-iconTop">
-            <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
-        </div>
-     </footer>
-
-    <!-- scroll reveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- typed js -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    
-    <!-- custom js -->
-    <script src="portfolio.js"></script>
+<script src="script.js"></script>
 </body>
-
 </html>
